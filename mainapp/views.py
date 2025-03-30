@@ -4,12 +4,11 @@ import datetime
 
 # Create your views here.
 def home(request):
-  key = '91a016a5ded7f0fd7f29ebb4d50c8090'
   if request.method == 'POST':
     city = request.POST.get('city')
   else:
     city = 'los angeles'
-  url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={key}"
+  url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=91a016a5ded7f0fd7f29ebb4d50c8090"
   params = {
     "units":"metric",
   }
